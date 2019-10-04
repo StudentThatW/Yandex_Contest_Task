@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>first-letter</title>
+    <style>
+        .block1 {
+            padding-left: 20px;
+            margin-left: 30%;
+            width: 460px;
+            height: 670px;
+            overflow: hidden;
+        }
+        
+        .block2 {
+            float: left;
+            padding-right: 20px;
+        }
+        
+        #circle {
+            width: 140px;
+            height: 140px;
+            background: #f1cf2f;
+            -moz-border-radius: 70px;
+            -webkit-border-radius: 70px;
+            border-radius: 70px;
+            margin-left: 35%;
+            margin-top: -16%;
+        }
+        
+        #triangle-up {
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 60px solid #c5241c;
+            margin-left: 23%;
+            margin-top: -29.5%;
+            transform: rotate(90deg);
+        }
+        
+        #square {
+            width: 75px;
+            height: 75px;
+            background: black;
+            margin-left: 17%;
+            margin-top: -13%;
+        }
+        
+        #rectangle {
+            width: 100px;
+            height: 75px;
+            background: #f1cf2f;
+            margin-left: -18%;
+            margin-top: 60%;
+            transform: rotate(30deg);
+        }
+        
+        #rectangle2 {
+            width: 100px;
+            height: 40px;
+            background: #f1cf2f;
+            margin-left: 83%;
+            margin-top: -5%;
+            transform: rotate(30deg);
+            z-index: 1;
+        }
+        
+        #hexagon {
+            width: 60px;
+            height: 33px;
+            background: #c5241c;
+            position: relative;
+            margin-left: 3%;
+            margin-top: -5%;
+            transform: rotate(100deg);
+        }
+        
+        #hexagon:before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 15px solid #c5241c;
+        }
+        
+        #hexagon:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-top: 15px solid #c5241c;
+        }
+        
+        #pentagon {
+            position: relative;
+            width: 54px;
+            border-width: 50px 18px 0;
+            border-style: solid;
+            border-color: #c5241c transparent;
+            transform: rotate(115deg);
+            margin-left: 61%;
+            margin-top: -15%;
+        }
+        
+        #pentagon:before {
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -85px;
+            left: -18px;
+            border-width: 0 45px 35px;
+            border-style: solid;
+            border-color: transparent transparent #c5241c;
+        }
+        
+        p {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 120%;
+        }
+        
+        P:first-letter {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 120%;
+            color: red;
+        }
+        
+        c {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 300%;
+            text-align: center;
+        }
+        
+        d {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 170%;
+        }
+        
+        z {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block1">
+        <p>Яндекс </p>
+        <c>Курс по разработке
+            <br> интерфейсов
+            <br>
+        </c>
+        <p></p>
+        <d>Яндекс совместно с ДММиКН УрФУ
+            <br> запускает годовой курс обучения
+            <br> основам веб-разработки</d>
+        <p></p>
+        <p></p>
+        <div class="block2">
+            <z>
+                &bull; Содержание курса
+                <br> &bull; Разметка страницы и CSS
+                <br> &bull; Язык JavaScript
+                <br> &bull; Клиентское программирование, React + Redux
+                <br> &bull; Серверное программирование на Node.js
+                <br>
+
+            </z>
+            <p></p>
+            <z>
+                Организационная встреча пройдет
+            </z>
+        </div>
+        <div class="block2">
+            <z>
+                Преподаватели - разработчики
+                <br> Яндекса. Занятия будут проходить по
+                <br> вечерам два раза в неделю -
+                <br> в ДММиКН УрФУ.
+            </z>
+            <p></p>
+            <z>
+                Курс рассчитан на студентов 3 курса
+                <br> и старше, а также магистрантов.
+            </z>
+        </div>
+        <div id="rectangle"></div>
+        <div id="hexagon"></div>
+        <div id="square"></div>
+        <div id="triangle-up"></div>
+        <div id="circle"></div>
+        <div id="pentagon"></div>
+        <div id="rectangle2"></div>
+    </div>
+</body>
+
+</html>
